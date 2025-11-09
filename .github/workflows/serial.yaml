@@ -15,7 +15,7 @@ jobs:
       - name: run extract.py
         run: python extract.py
   
-  trasform-data:
+  transform-data:
     runs-on: ubuntu-latest
     needs: extract-data
 
