@@ -1,0 +1,36 @@
+name: extract,transform and load workflow
+on:
+  push:
+     branches: 
+      - main
+
+jobs:
+  extract-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@v2
+
+      - name: run extract.py
+        run: python extract.py
+  
+  trasform-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@v2
+
+      - name: run transform.py
+        run: python transformt.py
+
+  load-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@v2
+
+      - name: run load.py
+        run: python load.py
