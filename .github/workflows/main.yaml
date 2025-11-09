@@ -1,15 +1,17 @@
 name: Run Github Action Pipeline
-on :
-  push: 
+
+on:
+  push:
     branches:
-      -main
+      - main
 
 jobs:
   demo-job:
     runs-on: ubuntu-latest
-    steps:
-      -name: checkout-code
-      uses: actions/checkout@v2 
 
-      -name: print message
-      runs: echo "Welcome to Github Actions"
+    steps:
+      - name: checkout-code
+        uses: actions/checkout@v2
+
+      - name: print message
+        run: echo "Welcome to Github Actions"
