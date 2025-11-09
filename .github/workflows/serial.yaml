@@ -1,4 +1,4 @@
-name: extract,transform and load workflow
+name: extract,transform and load workflow-with serial pipeline
 on:
   push:
      branches: 
